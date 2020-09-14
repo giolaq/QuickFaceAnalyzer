@@ -5,7 +5,7 @@ integrated with Android CameraX
 
 ## Important bits
 
-In the AndroidManifest.xml is enabled the dependency of the face model for HMS ML Kit with
+In the [AndroidManifest.xml](https://github.com/joaobiriba/QuickFaceAnalyzer/blob/master/app/src/main/AndroidManifest.xml) is enabled the dependency of the face model for HMS ML Kit with
 
 ```xml
  <meta-data
@@ -13,7 +13,7 @@ In the AndroidManifest.xml is enabled the dependency of the face model for HMS M
         android:value="face" />
  ```
 
-In the FaceDetectorProcessor.kt there is the creation of the Face Analyzer responsible to detect the faces in an image
+In the [FaceDetectorProcessor.kt](https://github.com/joaobiriba/QuickFaceAnalyzer/blob/master/app/src/main/java/com/huawei/quickfaceanalyzer/processor/face/FaceDetectorProcessor.kt) there is the creation of the Face Analyzer responsible to detect the faces in an image
 
 ```kotlin
         detector = MLAnalyzerFactory.getInstance().getFaceAnalyzer(options)
@@ -32,7 +32,7 @@ The option passed as argument can have multiple statements
 feel free to check the [documentation](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References-V5/mlfaceanalyzersetting-0000001050169395-V5)
 for more options
 
-Every time the detector detect one or more faces these will be returned in the onSuccess
+Every time the detector detects one or more faces these will be returned in the onSuccess
 ```kotlin
    override fun onSuccess(faces: List<MLFace>, graphicOverlay: GraphicOverlay) {
         for (face in faces) {
@@ -44,14 +44,25 @@ Every time the detector detect one or more faces these will be returned in the o
 From a MLFace object You will be able to get 
 
 [Emotions](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References-V5/mlfaceemotion-0000001050169397-V5)
+
 [Face Features](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References-V5/mlfacefeature-0000001050167444-V5)
+
 [Feature Key Points](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References-V5/mlfacekeypoint-0000001050169399-V5)
+
 [Face feature contour](https://developer.huawei.com/consumer/en/doc/development/HMSCore-References-V5/mlfaceshape-0000001050167446-V5)
 
-Also check FaceGraphic.kt for a sample to check how to display the info you want on the canvas
+Also check [FaceGraphic.kt](https://github.com/joaobiriba/QuickFaceAnalyzer/blob/master/app/src/main/java/com/huawei/quickfaceanalyzer/graphic/face/FaceGraphic.kt) for a sample to check how to display the info you want on the canvas
+
+In the [OnSwipeTouchListener.kt] (https://github.com/joaobiriba/QuickFaceAnalyzer/blob/master/app/src/main/java/com/huawei/quickfaceanalyzer/utils/OnSwipeTouchListener.kt) there is the code to handle the Top to Bottom swype down gesture to change the camera
 ## Usage
 
 Open the project with Android Studio 4.0 and run it or alternatively use gradle directly
+
+Enable the permissions asked by the system
+
+Point the camera to a face 
+
+Swype down from top to bottom on the screen to change camera
 
 ## Use it!
 
