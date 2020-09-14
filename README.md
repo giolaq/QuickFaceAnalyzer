@@ -53,7 +53,7 @@ From a MLFace object You will be able to get
 
 Also check [FaceGraphic.kt](https://github.com/joaobiriba/QuickFaceAnalyzer/blob/master/app/src/main/java/com/huawei/quickfaceanalyzer/graphic/face/FaceGraphic.kt) for a sample to check how to display the info you want on the canvas
 
-In the [OnSwipeTouchListener.kt] (https://github.com/joaobiriba/QuickFaceAnalyzer/blob/master/app/src/main/java/com/huawei/quickfaceanalyzer/utils/OnSwipeTouchListener.kt) there is the code to handle the Top to Bottom swype down gesture to change the camera
+In the [OnSwipeTouchListener.kt](https://github.com/joaobiriba/QuickFaceAnalyzer/blob/master/app/src/main/java/com/huawei/quickfaceanalyzer/utils/OnSwipeTouchListener.kt) there is the code to handle the Top to Bottom swype down gesture to change the camera
 ## Usage
 
 Open the project with Android Studio 4.0 and run it or alternatively use gradle directly
